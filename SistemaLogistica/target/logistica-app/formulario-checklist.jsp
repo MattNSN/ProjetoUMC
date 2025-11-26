@@ -22,7 +22,7 @@
             <form method="POST" action="salvarChecklist">
                 
                 <fieldset class="p-3 mb-4 border rounded border-primary-subtle">
-                    <legend class="fw-bold p-1 w-auto fs-5 text-primary">1. Dados da Carga</legend>
+                    <legend class="fw-bold p-1 w-auto fs-5 text">1. Dados da Carga</legend>
 
                     <div class="row g-3">
                         <div class="col-md-3">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     
-                    <h5 class="mt-4 mb-2 text-info">Tipo de Produto:</h5>
+                    <h5 class="mt-4 mb-2 text">Tipo de Produto:</h5>
                     <div class="row g-2">
                         <div class="col-auto"><div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="tipoProduto" value="Farmaceutico">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     
-                    <h5 class="mt-4 mb-2 text-info">Tipo de Volume:</h5>
+                    <h5 class="mt-4 mb-2 text">Tipo de Volume:</h5>
                     <div class="row g-2">
                         <div class="col-auto"><div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="tiposVolume" value="Palete">
@@ -93,7 +93,7 @@
                         </div>
                     </div>
 
-                    <h5 class="mt-4 mb-2 text-info">CT-e Emitido:</h5>
+                    <h5 class="mt-4 mb-2 text">CT-e Emitido:</h5>
                     <div class="row g-2">
                         <div class="col-auto"><div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="ctEmitido" id="ctSim" value="Sim" required>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
 
-                    <h5 class="mt-4 mb-2 text-info">Temperatura:</h5>
+                    <h5 class="mt-4 mb-2 text">Temperatura:</h5>
                     <div class="row g-2">
                         <div class="col-auto"><div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="temperatura" value="Ambiente">
@@ -134,17 +134,17 @@
                     
                     <div class="col-md-6">
                         <fieldset class="p-3 border rounded h-100 border-warning-subtle">
-                            <legend class="fw-bold p-1 w-auto fs-5 text-warning">2. Recebimento</legend>
+                            <legend class="fw-bold p-1 w-auto fs-5 text">2. Recebimento</legend>
                             
-                            <h6 class="text-success">Data / Hora:</h6>
+                            <h6 class="text">Data / Hora:</h6>
                             <input type="datetime-local" class="form-control mb-3" name="recebimentoDataHora">
                             
-                            <h6 class="text-warning">Transporte:</h6>
+                            <h6 class="text">Transporte:</h6>
                             <input type="text" class="form-control mb-2" name="recebimentoTransportadora" placeholder="Transportadora">
                             <input type="text" class="form-control mb-2" name="recebimentoMotorista" placeholder="Motorista">
                             <input type="text" class="form-control mb-3" name="recebimentoPlaca" placeholder="Placa do Veículo" pattern="([A-Z]{3}[0-9]{4})|([A-Z]{3}[0-9][A-Z][0-9]{2})" title="Formato de placa inválido. Use ABC-1234 (antigo) ou ABC1D23 (Mercosul)">
 
-                            <h6 class="text-warning">Frota:</h6>
+                            <h6 class="text">Frota:</h6>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="recebimentoFrota" value="Propria" id="recFrotaPropria">
@@ -156,10 +156,10 @@
                                 </div></div>
                             </div>
 
-                            <h5 class="mt-3 text-danger">Descreva as Irregularidades (Rec.):</h5>
+                            <h5 class="mt-3">Descreva as Irregularidades (Rec.):</h5>
                             <textarea class="form-control mb-3" rows="3" name="recIrregularidades"></textarea>
 
-                            <h5 class="mt-3 text-success">Resultado da Inspeção (Rec.):</h5>
+                            <h5 class="mt-3">Resultado da Inspeção (Rec.):</h5>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="recResultado" value="Indicios" id="recIndicios">
@@ -177,17 +177,17 @@
                     
                     <div class="col-md-6">
                         <fieldset class="p-3 border rounded h-100 border-success-subtle">
-                            <legend class="fw-bold p-1 w-auto fs-5 text-success">3. Expedição</legend>
+                            <legend class="fw-bold p-1 w-auto fs-5 text">3. Expedição</legend>
                             
-                            <h6 class="text-success">Data / Hora:</h6>
+                            <h6 class="text">Data / Hora:</h6>
                             <input type="datetime-local" class="form-control mb-3" name="expedicaoDataHora">
                             
-                            <h6 class="text-success">Transporte:</h6>
+                            <h6 class="text">Transporte:</h6>
                             <input type="text" class="form-control mb-2" name="expedicaoTransportadora" placeholder="Transportadora">
                             <input type="text" class="form-control mb-2" name="expedicaoMotorista" placeholder="Motorista">
                             <input type="text" class="form-control mb-3" name="expedicaoPlaca" placeholder="Placa do Veículo" pattern="([A-Z]{3}[0-9]{4})|([A-Z]{3}[0-9][A-Z][0-9]{2})" title="Formato de placa inválido. Use ABC-1234 (antigo) ou ABC1D23 (Mercosul)">
 
-                            <h6 class="text-success">Frota:</h6>
+                            <h6 class="text">Frota:</h6>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="expedicaoFrota" value="Propria" id="expFrotaPropria">
@@ -199,10 +199,10 @@
                                 </div></div>
                             </div>
 
-                            <h5 class="mt-3 text-danger">Descreva as Irregularidades (Exp.):</h5>
+                            <h5 class="mt-3">Descreva as Irregularidades (Exp.):</h5>
                             <textarea class="form-control mb-3" rows="3" name="expIrregularidades"></textarea>
 
-                            <h5 class="mt-3 text-success">Resultado da Inspeção (Exp.):</h5>
+                            <h5 class="mt-3 text">Resultado da Inspeção (Exp.):</h5>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="expResultado" value="Indicios" id="expIndicios">

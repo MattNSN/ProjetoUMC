@@ -31,7 +31,7 @@
             <form> 
                 
                 <fieldset class="p-3 mb-4 border rounded border-primary-subtle" disabled>
-                    <legend class="fw-bold p-1 w-auto fs-5 text-primary">1. Dados da Carga</legend>
+                    <legend class="fw-bold p-1 w-auto fs-5 text">1. Dados da Carga</legend>
 
                     <div class="row g-3">
                         <div class="col-md-3">
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     
-                    <h5 class="mt-4 mb-2 text-info">Tipo de Produto:</h5>
+                    <h5 class="mt-4 mb-2 text">Tipo de Produto:</h5>
                     <div class="row g-2">
                         <c:set var="tipos" value="${checklist.tiposProduto}"/>
                         
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     
-                    <h5 class="mt-4 mb-2 text-info">Tipo de Volume:</h5>
+                    <h5 class="mt-4 mb-2 text">Tipo de Volume:</h5>
                     <div class="row g-2">
                         <c:set var="volumes" value="${checklist.tiposVolume}"/>
                         
@@ -106,7 +106,7 @@
                         </div>
                     </div>
 
-                    <h5 class="mt-4 mb-2 text-info">CT-e Emitido:</h5>
+                    <h5 class="mt-4 mb-2 text">CT-e Emitido:</h5>
                     <div class="row g-2">
                         <div class="col-auto"><div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" <c:if test="${checklist.ctEmitido eq 'Sim'}">checked</c:if>>
@@ -121,7 +121,7 @@
                         </div>
                     </div>
 
-                    <h5 class="mt-4 mb-2 text-info">Temperatura:</h5>
+                    <h5 class="mt-4 mb-2 text">Temperatura:</h5>
                     <div class="row g-2">
                         <div class="col-auto"><div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" <c:if test="${checklist.temperatura eq 'Ambiente'}">checked</c:if>>
@@ -147,18 +147,18 @@
                     
                     <div class="col-md-6">
                         <fieldset class="p-3 border rounded h-100 border-warning-subtle" disabled>
-                            <legend class="fw-bold p-1 w-auto fs-5 text-warning">2. Recebimento</legend>
+                            <legend class="fw-bold p-1 w-auto fs-5 text>"2. Recebimento</legend>
                             
-                            <h6 class="text-success">Data / Hora:</h6>
+                            <h6 class="text">Data / Hora:</h6>
                             <input type="datetime-local" class="form-control mb-3" 
                                    value="<fmt:formatDate value="${checklist.recebimentoDataHora}" pattern="yyyy-MM-dd'T'HH:mm"/>" readonly>
                             
-                            <h6 class="text-warning">Transporte:</h6>
+                            <h6 class="text">Transporte:</h6>
                             <input type="text" class="form-control mb-2" value="${checklist.recebimentoTransportadora}" placeholder="Transportadora" readonly>
                             <input type="text" class="form-control mb-2" value="${checklist.recebimentoMotorista}" placeholder="Motorista" readonly>
                             <input type="text" class="form-control mb-3" value="${checklist.recebimentoPlaca}" placeholder="Placa do Veículo" readonly>
 
-                            <h6 class="text-warning">Frota:</h6>
+                            <h6 class="text">Frota:</h6>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" <c:if test="${checklist.recebimentoFrota eq 'Propria'}">checked</c:if>>
@@ -170,10 +170,10 @@
                                 </div></div>
                             </div>
 
-                            <h5 class="mt-3 text-danger">Descreva as Irregularidades (Rec.):</h5>
+                            <h5 class="mt-3">Descreva as Irregularidades (Rec.):</h5>
                             <textarea class="form-control mb-3" rows="3" readonly>${checklist.recIrregularidades}</textarea>
 
-                            <h5 class="mt-3 text-success">Resultado da Inspeção (Rec.):</h5>
+                            <h5 class="mt-3">Resultado da Inspeção (Rec.):</h5>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" <c:if test="${checklist.recResultado eq 'Indicios'}">checked</c:if>>
@@ -191,18 +191,18 @@
                     
                     <div class="col-md-6">
                         <fieldset class="p-3 border rounded h-100 border-success-subtle" disabled>
-                            <legend class="fw-bold p-1 w-auto fs-5 text-success">3. Expedição</legend>
+                            <legend class="fw-bold p-1 w-auto fs-5 text">3. Expedição</legend>
                             
-                            <h6 class="text-success">Data / Hora:</h6>
+                            <h6 class="text">Data / Hora:</h6>
                             <input type="datetime-local" class="form-control mb-3" 
                                    value="<fmt:formatDate value="${checklist.expedicaoDataHora}" pattern="yyyy-MM-dd'T'HH:mm"/>" readonly>
                             
-                            <h6 class="text-success">Transporte:</h6>
+                            <h6 class="text">Transporte:</h6>
                             <input type="text" class="form-control mb-2" value="${checklist.expedicaoTransportadora}" placeholder="Transportadora" readonly>
                             <input type="text" class="form-control mb-2" value="${checklist.expedicaoMotorista}" placeholder="Motorista" readonly>
                             <input type="text" class="form-control mb-3" value="${checklist.expedicaoPlaca}" placeholder="Placa do Veículo" readonly>
 
-                            <h6 class="text-success">Frota:</h6>
+                            <h6 class="text">Frota:</h6>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" <c:if test="${checklist.expedicaoFrota eq 'Propria'}">checked</c:if>>
@@ -214,10 +214,10 @@
                                 </div></div>
                             </div>
 
-                            <h5 class="mt-3 text-danger">Descreva as Irregularidades (Exp.):</h5>
+                            <h5 class="mt-3">Descreva as Irregularidades (Exp.):</h5>
                             <textarea class="form-control mb-3" rows="3" readonly>${checklist.expIrregularidades}</textarea>
 
-                            <h5 class="mt-3 text-success">Resultado da Inspeção (Exp.):</h5>
+                            <h5 class="mt-3 text">Resultado da Inspeção (Exp.):</h5>
                             <div class="row g-2 mb-3">
                                 <div class="col-auto"><div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" <c:if test="${checklist.expResultado eq 'Indicios'}">checked</c:if>>
